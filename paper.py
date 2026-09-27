@@ -45,7 +45,7 @@ def booktabs(rows, widths, bold_first_col=False):
 S = []
 S += [Paragraph("Is Nvidia the Next Cisco?", title),
       Paragraph("A Monte Carlo test of the AI trade", sub),
-      Paragraph("Jacob Rodan<br/><font size=9.5>Tel Aviv, September 2026</font>", auth), Spacer(1, 9)]
+      Paragraph("Jacob Rodan<br/><font size=9.5>September 2026</font><br/><font size=9>github.com/Jacobrodan/nvidia-vs-cisco</font>", auth), Spacer(1, 9)]
 
 abstract = (
     f"<b>Abstract.</b> In March 2000, Cisco was the most valuable company in the world and the company selling the picks and "
@@ -129,7 +129,8 @@ S.append(KeepTogether([Paragraph("<b>Table 2.</b> Model inputs. Each simulation 
 S.append(Spacer(1, 6))
 S.append(Paragraph(
     "None of these ranges is a prediction. They are my best attempt at a fair set of possibilities, and the code lets anyone "
-    "change them. Running 100,000 simulations turns those ranges into a distribution of outcomes.", body))
+    "change them. I set them before running the simulation and did not adjust them after seeing the results. The one I am least sure "
+    "about is the chance of a bust, so instead of defending a single number, Figure 2b shows how the answer changes across the whole range.", body))
 
 S.append(Paragraph("5. Results", h1))
 S.append(Paragraph(
@@ -175,7 +176,11 @@ S.append(Paragraph(
 S.append(Paragraph(
     "On the cycle, it could be. The model says the main way an investor loses money here is not that the stock was absurdly expensive. "
     "It is that the customers stop buying for a year or two, the way Cisco's did in 2001. Whether that happens depends less on Nvidia "
-    "than on whether the companies buying its chips earn enough from AI to keep spending. That is the question worth watching.", body))
+    "than on whether the companies buying its chips earn enough from AI to keep spending.", body))
+S.append(Paragraph(
+    "The most useful thing to track is therefore not Nvidia's own earnings. It is how much its largest "
+    "customers make from AI compared with how much they spend on it. As long as that gap keeps closing, the boom has a floor. If it "
+    "stops closing, the Cisco comparison starts to look much closer.", body))
 
 S.append(Paragraph("7. Limitations", h1))
 S.append(Paragraph(
@@ -195,7 +200,7 @@ for rt in [
 ]:
     S.append(Paragraph(rt, ref))
 S.append(Spacer(1, 4))
-S.append(Paragraph("<i>Code: the full simulation is available on GitHub.</i>", cap))
+S.append(Paragraph("<i>Code and data: github.com/Jacobrodan/nvidia-vs-cisco. Comments and corrections are welcome.</i>", cap))
 
 def on_page(c, d):
     c.saveState(); c.setFont("Times-Roman", 8.5); c.drawCentredString(letter[0] / 2, 0.45 * inch, str(d.page)); c.restoreState()
