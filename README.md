@@ -1,6 +1,6 @@
 # Is Nvidia the Next Cisco?
 
-A Monte Carlo test of the AI trade. By Jacob Rodan, Tel Aviv, September 2026.
+A Monte Carlo test of the AI trade. By Jacob Rodan, September 2026.
 
 In March 2000, Cisco was the most valuable company in the world. Its business kept growing, but its stock took 25 years to get back to its peak. Nvidia holds the same position in AI today. This project simulates 100,000 five-year futures for Nvidia's revenue, profit margins and valuation, including the chance of a Cisco-style AI spending bust, to test whether today's buyers face the same risk.
 
